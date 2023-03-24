@@ -50,7 +50,7 @@ func initClient() (*deepl.Client, *openai.Client) {
 	}
 	deeplClient := deepl.NewClient(deeplAPIKey)
 
-	openaiAPIKey := os.Getenv("CHATGPT_API_KEY")
+	openaiAPIKey := os.Getenv("OPENAI_API_KEY")
 	if openaiAPIKey == "" {
 		fmt.Println("OPENAI_API_KEYが設定されていません。")
 		return nil, nil
